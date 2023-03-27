@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+@font-face {
+  font-family: 'Stepp ITC Std';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("./assets/fonts/Stepp-ITC-Std-Bold.woff2") format('woff2');
+}
+
+#root {
+  display: flex;
+  min-height: 100vh;
+}
+
+.banner {
+  background-color: #010101;
+  font-family: 'DM Sans', sans-serif;
+  position: relative;
+  max-width: 37.25rem;
+  width: 100%;
+  max-height: 43.5rem;
+  height: 100%;
+  margin: auto;
+  border-radius: 4px;
+  overflow: hidden;
+
+  &__top {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__top_info {
+    position: absolute;
+    left: 50%;
+    bottom: 2.5rem;
+    max-width: 21.875rem;
+    width: 100%;
+    transform: translateX(-50%);
+  }
+
+  &__top_info_inner {
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+    color: #fff;
+    text-align: center;
+  }
+
+  &__top_text {
+    margin-block-end: 1rem;
+    font-size: .625rem;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  &__top_title {
+    font-family: 'Stepp ITC Std';
+    font-size: 3.4375rem;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+  }
+
+  &__bottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 5rem;
+    background-color: #F4F4F4;
+    transform: translateY(100%);
+    transition: transform 360ms 700ms;
+    z-index: 9;
+  }
+  
+  &__bottom_inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: #262626;
+    text-align: center;
+    transition: opacity 360ms 1260ms;
+    opacity: 0;
+  }
+
+  &__bottom_text {
+    font-size: .625rem;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  &__mb1 {
+    margin-block-end: 1rem;
+  }
+
+  &__bottom_title {
+    font-family: 'Stepp ITC Std';
+    font-size: 3.4375rem;
+    line-height: 100%;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+  }
+  
+  &__model_wrap {
+    max-width: 12.125rem;
+    width: 100%;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  &__model_image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__bottom_description {
+    margin-block-end: 1rem;
+    font-size: 1.125rem;
+    line-height: 150%;
+    color: #747474;
+  }
+
+  &__shop {
+    font-size: .875rem;
+    line-height: 160%;
+    font-weight: 500;
+    color: #262626;
+    text-decoration: underline;
+  }
+
+  &__text_wrapper,
+  &__title_wrapper {
+    overflow: hidden;
+  }
+
+  &__text_wrapper {
+    height: .625rem;
+  }
+
+  &__title_wrapper {
+    height: 3.8rem;
+  }
+
+  &__text_animation {
+    transition: transform 500ms;
+  }
+
+  &__bottom_animation {
+    transform: translateY(120%);
+    transition: transform 500ms 1500ms;
+  }
+
+  &:hover {
+
+      .banner__text_animation {
+        transform: translateY(120%);
+      }
+
+      .banner__bottom {
+        transform: translateY(0);
+      }
+      
+      .banner__bottom_inner {
+        opacity: 1;
+      }
+      
+      .banner__bottom_animation {
+        transform: translateY(0);
+      }
+  }
+}
